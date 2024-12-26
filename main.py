@@ -1,12 +1,11 @@
-def bewerber_pruefen(alter, abschlussnote):
-    if 20 <= alter <= 50 and abschlussnote >= 80:
-        return "einstellen"
-    else:
-        return "ablehnen"
+note = int(input("Note eingeben (0-100): "))
+erfahrung = int(input("Programmiererfahrung eingeben (1-5): "))
 
-# Test
-alter = int(input("Bitte geben Sie das Alter des Bewerbers ein: "))
-abschlussnote = float(input("Bitte geben Sie die Abschlussnote des Bewerbers ein: "))
-
-ergebnis = bewerber_pruefen(alter, abschlussnote)
-print(ergebnis)
+if note > 90:
+    print("Einstellen")
+elif erfahrung == 5 and note >= 70:
+    print("Einstellen")
+elif note > 70 or erfahrung == 4:
+    print("Zum Gespräch einladen")
+else:
+    print("Ablehnen")
