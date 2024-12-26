@@ -1,15 +1,12 @@
-# Startguthaben
-konto = 1000
+def bewerber_pruefen(alter, abschlussnote):
+    if 20 <= alter <= 50 and abschlussnote >= 80:
+        return "einstellen"
+    else:
+        return "ablehnen"
 
-print("Ihr aktuelles Guthaben beträgt: {konto} EURO")
-aktion = input("Möchten Sie 'einzahlen' oder 'abheben'? ").strip().lower()
+# Test
+alter = int(input("Bitte geben Sie das Alter des Bewerbers ein: "))
+abschlussnote = float(input("Bitte geben Sie die Abschlussnote des Bewerbers ein: "))
 
-if aktion == "einzahlen":
-    betrag = int(input("Wie viel möchten Sie einzahlen? "))
-    konto += betrag
-
-elif aktion == "abheben":
-    betrag = int(input("Wie viel möchten Sie abheben? "))
-    konto -= betrag
-
-print("Ihr aktuelles Guthaben beträgt jetzt: {konto} EURO")
+ergebnis = bewerber_pruefen(alter, abschlussnote)
+print(ergebnis)
